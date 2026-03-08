@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  # 1. The Database
+  mongodb:
+    image: mongo:latest
+    container_name: meat_master_db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  # 2. The Python Backend
+  api:
+    build: 
+      context: ./backend    # Tells Docker where the Python Dockerfile lives
+    container_name: meat_master_api
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongodb             # Ensures Mongo starts BEFORE the API
+
+  # 3. The React Frontend
+  dashboard:
+    build: 
+      context: ./frontend   # Tells Docker where the React Dockerfile lives
+    container_name: meat_master_ui
+    ports:
+      - "80:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: bun run dev --host 0.0.0.0
+    depends_on:
+      - api                 # Ensures the API starts BEFORE the dashboard
+
+volumes:
+  mongo_data: 
