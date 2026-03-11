@@ -5,6 +5,8 @@ from app.models import SmokeSession
 from typing import Any, cast 
 import requests
 
+
+
 app = FastAPI(title="Meat Master API")
 
 @app.on_event("startup")
