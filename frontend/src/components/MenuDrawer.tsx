@@ -1,4 +1,4 @@
-import { Drawer, IconButton, Portal, CloseButton, Text } from "@chakra-ui/react";
+=import { Drawer, IconButton, Portal, CloseButton, Text } from "@chakra-ui/react";
 
 const HamburgerIcon = () => (
   <svg
@@ -30,10 +30,10 @@ export default function MenuDrawer() {
       <Portal>
         <Drawer.Backdrop />
         <Drawer.Positioner>
-          <Drawer.Content bg={"gray.500"}>
+          <Drawer.Content bg{"gray.500"}>
             <Drawer.Header>
               <Drawer.Title>
-                Penus
+                Meat Master
               </Drawer.Title>
             </Drawer.Header>
 
