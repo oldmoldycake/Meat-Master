@@ -54,7 +54,7 @@ Get smoke ids
 @app.get("/get_weather")
 async def get_weather():
 """
-Gets the weather and stuff
+Gets the weather and stuff.
 """
     try:
         response = requests.get("https://api.open-meteo.com/v1/forecast?latitude=35.9943&longitude=-94.1752&daily=temperature_2m_max,temperature_2m_min,sunrise,sunset,showers_sum,snowfall_sum,rain_sum,wind_speed_10m_max,precipitation_probability_max,precipitation_sum,precipitation_hours&timezone=America%2FChicago&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch", timeout=10)
