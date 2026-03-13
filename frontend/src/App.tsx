@@ -1,31 +1,48 @@
-=import { BrowserRouter, Routes, Route } from "react-router-dom"
+=/**
+ * App Component
+ * 
+ * Main application component that sets up routing and layout structure.
+ * It renders a responsive layout with header, sidebar (commented out), and
+ * dynamic routes for dashboard and smoke log pages.
+ * 
+ * @component
+ * @example
+ * // Renders the main app structure
+ * <App />
+ */
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Box, Flex, Heading } from '@chakra-ui/react'
 
-// TODO: Re-enable Sidebar component when navigation structure is finalized
-// import Sidebar from './components/Sidebar'
+//import Sidebar from './components/Sidebar'
 import Dashboard from './pages/Dashboard'
-// TODO: Re-enable SmokeLog when smoke history UI/UX is designed
-// import SmokeLog from './pages/SmokeLog'
+//import SmokeLog from './pages/SmokeLog'
 import Header from './components/Header'
 
 /**
- * SmokeLog placeholder component - renders a heading for smoke history page.
- * TODO: Replace with full SmokeLog component once smoke tracking features are implemented.
+ * SmokeLog placeholder component
+ * 
+ * Displays a heading indicating where smoke history will be shown.
+ * Currently a temporary placeholder until full implementation.
+ * 
+ * @component
  */
 const SmokeLog = () => <Heading>Your Smoke History</Heading>
 
+
 /**
- * Main application component.
- * Provides routing for core pages: Dashboard (root) and SmokeLog (/smokes).
- * Uses Chakra UI for layout and Chakra responsive behavior.
- * @returns {JSX.Element} Main app structure with header, background, and route switch.
+ * Main application component
+ * 
+ * Wraps the entire app in React Router and Chakra UI layout components.
+ * Provides the top-level navigation structure and route handling.
+ * 
+ * @returns {JSX.Element} The rendered application structure
  */
 export default function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Flex minH={"100vh"} bg={"gray.900"} color={"white"}>
-        <Box flex={1} p={8}>
+      <Flex minH={"100vh"} bg{"gray.900"} color{"white"}>
+        <Box flex{"1"} p{8}>
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/smokes" element={<SmokeLog />} />
