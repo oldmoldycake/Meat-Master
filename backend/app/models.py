@@ -4,6 +4,9 @@ from typing import Optional
 from pydantic import Field
 
 class SmokeSession(Document):
+"""
+For smoke type
+"""
     food_type: str
     wood_used: str
     description: Optional[str] = None
