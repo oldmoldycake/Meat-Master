@@ -4,13 +4,13 @@
 
 Meat Master is a BBQ smoke tracking application that helps users log, manage, and analyze their smoking sessions using MongoDB and FastAPI with Beanie ODM.
 
-## ğŸ§° Tech Stack
+## í ¾í·° Tech Stack
 
 - **Backend**: FastAPI, Beanie (Motor + Pydantic), MongoDB
 - **Frontend**: React, TypeScript, Chakra UI, Vite
 - **External APIs**: Open-Meteo for weather forecasts
 
-## ğŸ“‚ Project Structure
+## í ½í³‚ Project Structure
 
 ```plaintext
 meatmaster/
@@ -43,7 +43,7 @@ meatmaster/
     â””â”€â”€ package.json
 ```
 
-## ğŸš€ Getting Started
+## í ½íº€ Getting Started
 
 ### Prerequisites
 
@@ -102,7 +102,7 @@ meatmaster/
    ```
    Frontend should be up at `http://localhost:5173`.
 
-## ğŸ“– API Endpoints
+## í ½í³– API Endpoints
 
 - `GET /api/v1/smoke/` â€” list all smoke sessions
 - `POST /api/v1/smoke/` â€” create a new smoke session
@@ -111,11 +111,11 @@ meatmaster/
 - `DELETE /api/v1/smoke/{id}` â€” delete a smoke session
 - `GET /api/v1/weather/` â€” fetch weather forecast (if Open-Meteo enabled)
 
-## ğŸ¤ Contributing
+## í ¾í´ Contributing
 
 Contributions are welcome! Fork, branch, commit, and open a PR. Please ensure tests pass and the code follows project conventions.
 
-## ğŸ“„ License
+## í ½í³„ License
 
 MIT License. See `LICENSE` for details.
 
