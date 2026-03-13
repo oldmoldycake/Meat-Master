@@ -26,7 +26,7 @@ async def health_check():
 @app.post("/record_smoke")
 async def record_smoke(session: SmokeSession):
     """
-        Used to record the details of a smoke
+        Used to record the details of a smoke.
     """
     session.insert()
     return {"message": "Smoke Saved!"}
