@@ -40,6 +40,9 @@ async def get_all_smokes():
 
 @app.get("/get_smoke/{smoke_id}")
 async def get_smoke(smoke_id: int):
+"""
+Get smoke ids
+"""
     smoke = await SmokeSession.find_one(SmokeSession.smoke_id == smoke_id)
 
     if not smoke: 
